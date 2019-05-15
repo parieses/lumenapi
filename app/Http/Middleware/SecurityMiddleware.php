@@ -36,9 +36,9 @@ class SecurityMiddleware
         }
 //        var_dump($token);
         // 获取登陆用户信息
-        if ($token ==12){
-            return redirect('/');
-        }
+//        if ($token ==12){
+//            return redirect('/');
+//        }
 //        $user = User::find($uid);
         // 判断是否为管理员身份
 //        if(!$user->administrator) {

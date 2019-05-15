@@ -29,9 +29,9 @@ class LogMiddleware
     public function handle($request, Closure $next)
     {
 
-        Log::debug('Request Url: '.$request->url());
-        Log::debug('Request Method: '.$request->method());
-        Log::debug('Request Params: '.json_encode($request->all()));
+//        Log::debug('Request Url: '.$request->url());
+//        Log::debug('Request Method: '.$request->method());
+//        Log::debug('Request Params: '.json_encode($request->all()));
         return $next($request);
     }
 }

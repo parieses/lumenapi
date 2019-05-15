@@ -26,7 +26,7 @@ $router->get('/', function () use ($router) {
 //$router->get('profile', ['as' => 'profiles', function () {
 //    return 12;
 //}]);
-$router->get('users[/{name}]', ['middleware' => ["log","security"],function($name) use($router){
+$router->post('users[/{name}]', ['middleware' => ["log","security"],function($name) use($router){
 //    return response()->json(['name' => 'Abigail', 'state' => 'CA']);
 },'uses' => 'ExampleController@store']);
 /**
