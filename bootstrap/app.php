@@ -66,11 +66,8 @@ $app->singleton(
 // ]);
 $app->routeMiddleware([
     'security' => App\Http\Middleware\SecurityMiddleware::class,
-]);
-$app->routeMiddleware([
     'log' => App\Http\Middleware\LogMiddleware::class,
 ]);
-
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
