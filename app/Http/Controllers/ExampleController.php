@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 
 //use Illuminate\Routing\Controller;
 class ExampleController extends Controller
@@ -17,12 +17,15 @@ class ExampleController extends Controller
     {
         //
     }
-    public function store(Request $request)
+    public function store(Request $request,Response $response)
     {
         $name = $request->all();
 //        return $name;
-        DB::table('user')->insert(['id'=>rand(1,999999)]);
-        return 111111111111111;
+        var_dump(31);
+        $a = DB::table('user')->select('id')->get();
+        $data = $response->setContent('qw');
+        var_dump(41);
+        return $data;
         //
     }
 

@@ -32,6 +32,7 @@ class LogMiddleware
 //        Log::debug('Request Url: '.$request->url());
 //        Log::debug('Request Method: '.$request->method());
 //        Log::debug('Request Params: '.json_encode($request->all()));
+        var_dump(21);
         return $next($request);
     }
 }
